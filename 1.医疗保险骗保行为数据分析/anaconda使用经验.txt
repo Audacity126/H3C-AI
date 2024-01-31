@@ -1,0 +1,4 @@
+1.安装软件
+2.在anaconda中创建环境。命名为对应的Python版本，比如Python3.7,可命名为Py37，然后选择安装对应的3.7解释器。然后在这个环境中去安装各种包，比如pandas，numpy等，建议用anaconda Prompt命令去安装会更快，具体命令见本文件夹下的<Python安装指南.txt>文件。（曾经遇到的问题：已经安装numpy但是无法正确导入模块，使用命令卸载后重新按照然后成功运行。pip uninstall numpy  
+pip install numpy）
+3.在pycharm中设置解释器，加载conda环境，先设置可执行文件路径，一般是conda.exe文件。（本机路径为D:\ProgramData\anaconda3\Scripts\conda.exe），然后使用现有环境（因为前面已经在anaconda中创建好了py37环境，所以这里会有可以选择的py37环境）见图片。
