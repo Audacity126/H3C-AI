@@ -132,12 +132,16 @@ plt.show()
 # 由条形图可见，合作方式的顺序依次为cpc，roi，cpm，cpd；广告尺寸大都为600*90。
 
 
-# In[10]:
+# In[24]:
 
 
 # 建模之前通常还需要检验变量之间的相关性，如果自变量之间具有强相关性，会影响模型的准确性，需要重点关注。
 # 采用热力图可视化展示连续变量之间的相关性。
 correlation_matrix = df.corr()
+"""
+correlation_matrix = df.corr(method='pearson',numeric_only=True)；pandas版本问题，原来corr函数自动忽略字符串等非浮点数的特性被修改。
+现在需要加上numeric_only=True才会忽略字符串。
+"""
 # 绘制相关关系图
 plt.figure(figsize=(8, 6))
 sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', center=0)
